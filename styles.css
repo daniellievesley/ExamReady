@@ -1,5 +1,6 @@
 html, button{
     font-family: Figtree;
+    background-color: rgb(208, 208, 208);
 }
 
 button{
@@ -34,13 +35,16 @@ header{
     align-items: center;
     position: sticky;
     background-color:blanchedalmond;
+    padding: 0% 0.8%;
 }
 
 section{
     background-color: lightpink;
-    padding: 0.5%;
+    padding: 1%;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 16px;
 }
 
 footer{
