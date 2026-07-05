@@ -1,0 +1,64 @@
+html, button{
+    font-family: Figtree;
+}
+
+button{
+    border-radius: 8px;
+    background-color: navy;
+    color: white;
+}
+
+header p{
+    font-family: Geist Pixel;
+    font-weight: bold;
+    font-size: 200%;
+    margin: 0;
+}
+
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;     
+}
+
+header nav ul li{
+    display: block;
+    flex: 1;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color:blanchedalmond;
+}
+
+section{
+    background-color: lightpink;
+    padding: 0.5%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+footer{
+    background-color: navy;
+    color: white;
+    padding: 0.5%;
+}
+
+footer h1{
+    font-family: Geist Pixel;
+}
+
+hero h1{
+    font-size: 400%;;
+}
+
+hero p, hero button{
+    font-size: 200%;
+}
+
+
