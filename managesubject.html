@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamReady</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geist+Pixel&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <p> ExamReady </p>
+        <nav>
+            <ul>
+                <li> Pricing </li>
+                <li> Subjects </li>
+                <li> Account </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1> Manage subjects. </h1>
+        <p> Track your revision and progress by subject. </p>
+        <section>
+            <h2> 1. Find your course. </h2>
+            <p> Pick your level, subject and exam board. </p>
+            <p> You can find our full <a href='subjects.html'> catalogue</a> of supported exam boards and subjects.</p>
+            <form>
+                <label for="level"> Choose your level: </label>
+                <select id='level' name="level">
+                    <option value='GCSE'>GCSE</option>
+                    <option value='A Level'>A Level</option>
+                </select>
+                <br>
+                <label for="subject"> Choose a subject: </label>
+                <select id='subject' name="subject">
+                    <option value='Computer Science'>Computer Science</option>
+                    <option value='Geography'>Geography</option>
+                    <option value='Mathematics'>Mathematics</option>
+                </select>
+                <br>
+                <label for="board"> Choose an exam board </label>
+                <select id='board' name="board">
+                    <option value='OCR'>OCR</option>
+                    <option value='AQA'>AQA</option>
+                    <option value='Edexcel'>Edexcel</option>
+                </select>
+        </section>
+        <section>
+            <h2> 2. Manage exam progress. </h2>
+            <p> Record a new exam paper or view past progress. </p>
+            <button> Record new paper </button>
+            <button> View previous progress </button>
+        </section>
+    </main>
+    <footer>
+        <h1> ExamReady</h1>
+        <p> Raise a ticket </p>
+        <p> Designed by Daniel Lievesley </p>
+    </footer>
+</body>
+</html>
