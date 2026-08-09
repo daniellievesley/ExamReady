@@ -23,10 +23,15 @@
     <main>
         <h1 id="subject-title"></h1>
         <section>
-            <h2> Statistics </h2>
-            <p>Average grade: <span id="avg-grade"></span></p>
-            <p>Past papers completed: <span id="papers"></span></p>
-            <button>Enter new mark</button>
+            <h2> Record paper </h2>
+            <label for='paper'> Choose a paper: </label>
+            <select id="paper">
+                <option value="">Select a paper</option>
+            </select>
+        </section>
+        <section>
+            <div id="questionDiv">
+            </div>
         </section>
     </main>
     <footer>
@@ -35,5 +40,6 @@
         <p> Designed by Daniel Lievesley </p>
     </footer>
      <script src="script.js"> </script>
+     <script src="paper-data.js"> </script>
 </body>
 </html>

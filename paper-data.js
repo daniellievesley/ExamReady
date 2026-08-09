@@ -567,3 +567,24 @@ const alevelOCRCompSciPapers = [
         ]
     }
 ];
+
+
+const paperSelect = document.getElementById("paper");
+
+alevelOCRCompSciPapers.forEach(paper => {
+
+    const option = document.createElement("option");
+
+    option.value = paper.id;
+    option.textContent =
+        `${paper.year} ${paper.series} - ${paper.paper}`;
+
+    paperSelect.appendChild(option);
+
+});
+
+paperSelect.addEventListener('onchange', recordScores);
+const questionDiv=document.getElementById('questionDiv');
+function recordScores(){
+    // for every paper, check paper mathces, for every Q then display some sort of box
+}
