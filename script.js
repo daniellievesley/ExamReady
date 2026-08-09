@@ -23,3 +23,6 @@ const level = levelNames[parts[0]];
 const board = boardNames[parts[1]];
 const subjName = subjects[parts.slice(2).join(" ")];
 document.getElementById("subject-title").innerHTML = level + " " + board + " " + subjName;
+
+document.getElementById("record-paper").href =
+    `record-paper.html?subject=${subject}`;
