@@ -584,7 +584,32 @@ alevelOCRCompSciPapers.forEach(paper => {
 });
 
 paperSelect.addEventListener('onchange', recordScores);
-const questionDiv=document.getElementById('questionDiv');
+const questionDivArea=document.getElementById('questionDiv');
 function recordScores(){
-    // for every paper, check paper mathces, for every Q then display some sort of box
+    alevelOCRCompSciPapers.forEach(paper => {
+        if(option.value===paper.id){
+            const questionDiv = document.createElement("div");
+            paper.questions.forEach(question => {
+                questionDiv.innerHTML = `
+    <h3>Question ${question.number}</h3>
+    <p>${question.topic}</p>
+
+    <label for="question-${question.number}">
+        Your mark:
+    </label>
+
+    <input
+        type="number"
+        id="question-${question.number}"
+        min="0"
+        max="${question.totalMarks}"
+    >
+
+    <span>/ ${question.totalMarks}</span>
+`;
+                questionDivArea.appendChild(questionDiv)
+            })
+            break;
+        }
+    })
 }
