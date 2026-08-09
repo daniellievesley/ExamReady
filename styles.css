@@ -65,4 +65,19 @@ hero p, hero button{
     font-size: 200%;
 }
 
+.card-wrapper{
+    display: flex;
+    grid-template-columns: repeat(1,3fr);
+}
+
+.subject-card{
+    border-radius: 12px;
+    padding-right: 1rem;
+    background-color: white;
+    padding-bottom: 1%;
+}
+
+.subject-card h3, .subject-card p, .subject-card strong, .subject-card a{
+    padding-left: 1rem;
+}
 
