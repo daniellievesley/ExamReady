@@ -24,9 +24,9 @@
         <h1> Manage subjects. </h1>
         <p> Track your revision and progress by subject. </p>
         <section>
-            <h2> Filter by subject and board </h2>
+            <h2> Filter subjects </h2>
             <p> You can find our full <a href='subjects.html'> catalogue</a> of supported exam boards and subjects.</p>
-            <form>
+            <form id="subject-filter">
                 <label for="level"> Choose your level: </label>
                 <select id='level' name="level">
                     <option value='GCSE'>GCSE</option>
@@ -46,12 +46,25 @@
                     <option value='AQA'>AQA</option>
                     <option value='Edexcel'>Edexcel</option>
                 </select>
+            </form>
         </section>
         <section>
-            <h2> 2. Manage exam progress. </h2>
-            <p> Record a new exam paper or view past progress. </p>
-            <button> Record new paper </button>
-            <button> View previous progress </button>
+            <h2> Your courses. </h2>
+            <article class="subject-card">
+                <h3> Computer Science </h3>
+                <p> A Level • Edexcel</p>
+                <div>
+                    <p> Average mark </p>
+                    <strong> 68% </strong>
+                </div>
+                <div>
+                    <p> Papers completed </p>
+                    <strong> 5 </strong>
+                </div>
+                <a href="dashboard.html?subject=mathematics-edexcel-a">
+                    View dashboard
+                </a>
+            </article>
         </section>
     </main>
     <footer>
