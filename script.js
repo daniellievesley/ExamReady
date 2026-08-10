@@ -18,11 +18,20 @@ const subjects={
 const params = new URLSearchParams(window.location.search);
 const subject = params.get("subject");
 
-const parts = subject.split('-');
-const level = levelNames[parts[0]];
-const board = boardNames[parts[1]];
-const subjName = subjects[parts.slice(2).join(" ")];
-document.getElementById("subject-title").innerHTML = level + " " + board + " " + subjName;
+if (subject) {
+    const parts = subject.split("-");
+    const level = levelNames[parts[0]];
+    const board = boardNames[parts[1]];
+    const subjName = subjects[parts.slice(2).join(" ")];
+    const subjectTitle = document.getElementById("subject-title");
 
-document.getElementById("record-paper").href =
-    `record-paper.html?subject=${subject}`;
+    if (subjectTitle) {
+        subjectTitle.textContent = `${level} ${board} ${subjName}`;
+    }
+
+    const recordPaperLink = document.getElementById("record-paper");
+
+    if (recordPaperLink) {
+        recordPaperLink.href = `record-paper.html?subject=${subject}`;
+    }
+}

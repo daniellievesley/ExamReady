@@ -570,27 +570,36 @@ const alevelOCRCompSciPapers = [
 
 
 const paperSelect = document.getElementById("paper");
+const questionDivArea = document.getElementById("questionDiv");
 
-alevelOCRCompSciPapers.forEach(paper => {
-
-    const option = document.createElement("option");
-
-    option.value = paper.id;
-    option.textContent =
-        `${paper.year} ${paper.series} - ${paper.paper}`;
-
-    paperSelect.appendChild(option);
-
-});
-
-paperSelect.addEventListener('onchange', recordScores);
-const questionDivArea=document.getElementById('questionDiv');
-function recordScores(){
+if (paperSelect) {
     alevelOCRCompSciPapers.forEach(paper => {
-        if(option.value===paper.id){
-            const questionDiv = document.createElement("div");
-            paper.questions.forEach(question => {
-                questionDiv.innerHTML = `
+        const option = document.createElement("option");
+        option.value = paper.id;
+        option.textContent = `${paper.year} ${paper.series} - ${paper.paper}`;
+        paperSelect.appendChild(option);
+    });
+
+    paperSelect.addEventListener("change", recordScores);
+}
+
+function recordScores(event) {
+    if (!questionDivArea) {
+        return;
+    }
+
+    const selectedPaperId = event.target.value;
+    const selectedPaper = alevelOCRCompSciPapers.find(paper => paper.id === selectedPaperId);
+
+    questionDivArea.innerHTML = "";
+
+    if (!selectedPaper) {
+        return;
+    }
+
+    selectedPaper.questions.forEach(question => {
+        const questionDiv = document.createElement("div");
+        questionDiv.innerHTML = `
     <h3>Question ${question.number}</h3>
     <p>${question.topic}</p>
 
@@ -607,9 +616,6 @@ function recordScores(){
 
     <span>/ ${question.totalMarks}</span>
 `;
-                questionDivArea.appendChild(questionDiv)
-            })
-            break;
-        }
-    })
+        questionDivArea.appendChild(questionDiv);
+    });
 }
