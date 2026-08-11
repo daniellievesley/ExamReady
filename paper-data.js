@@ -596,6 +596,7 @@ function recordScores(event) {
     }
 
     questionDivArea.innerHTML = "<form id='paper-input'>";
+    const paperForm = document.getElementById('paper-input');
 
     selectedPaper.questions.forEach(question => {
         const questionDiv = document.createElement("div");
@@ -616,14 +617,13 @@ function recordScores(event) {
 
     <span>/ ${question.totalMarks}</span>
 `;
-        questionDivArea.appendChild(questionDiv);
+        paperForm.appendChild(questionDiv);
     });
 
-    questionDivArea.insertAdjacentHTML("beforeend", `<br>
+    paperForm.insertAdjacentHTML("beforeend", `<br>
         <button id='submitscores' type="submit"> Save marks </button> </form>`);
 
-    const paperForm = document.getElementById('submitscores');
-paperForm.addEventListener('onclick', function(event){
+paperForm.addEventListener('submit', function(event){
     event.preventDefault();
     alert("Submit");
 }
