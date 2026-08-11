@@ -591,7 +591,7 @@ function recordScores(event) {
     const selectedPaperId = event.target.value;
     const selectedPaper = alevelOCRCompSciPapers.find(paper => paper.id === selectedPaperId);
 
-    questionDivArea.innerHTML = "";
+    questionDivArea.innerHTML = "<form id='paper-input'>";
 
     if (!selectedPaper) {
         return;
@@ -618,4 +618,12 @@ function recordScores(event) {
 `;
         questionDivArea.appendChild(questionDiv);
     });
+
+    questionDivArea.insertAdjacentHTML("beforeend", `<br>
+        <button type="submit"> Save marks </button> </form>`);
+    const paperForm = document.getElementById('paper-input');
+paperForm.addEventListener('submit', function(event){
+    event.preventDefault();
 }
+)}
+
