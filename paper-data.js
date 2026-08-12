@@ -626,6 +626,11 @@ function recordScores(event) {
 paperForm.addEventListener('submit', function(event){
     event.preventDefault();
     alert("Submit");
+    const inputs = paperForm.querySelectorAll("input");
+    for (let i=0; i<inputs.length; i++){
+        const mark = inputs[i].value;
+        console.log(mark + " recorded");
+    }
 }
 )}
 
