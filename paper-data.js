@@ -627,10 +627,17 @@ paperForm.addEventListener('submit', function(event){
     event.preventDefault();
     alert("Submit");
     const inputs = paperForm.querySelectorAll("input");
+    const combResult = [];
     for (let i=0; i<inputs.length; i++){
         const mark = inputs[i].value;
-        console.log(mark + " recorded");
-    }
+        const result = {
+            questionNumber = selectedPaper.questions[i].number,
+            mark = Number(mark),
+            maxMarks = selectedPaper.questions[i].totalMarks,
+            topic = selectedPaper.questions[i].topic
+        };
+        combResult.push(result);
+        }
+    })
 }
-)}
 
