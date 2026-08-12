@@ -631,12 +631,13 @@ paperForm.addEventListener('submit', function(event){
     for (let i=0; i<inputs.length; i++){
         const mark = inputs[i].value;
         const result = {
-            questionNumber = selectedPaper.questions[i].number,
-            mark = Number(mark),
-            maxMarks = selectedPaper.questions[i].totalMarks,
-            topic = selectedPaper.questions[i].topic
+            questionNumber: selectedPaper.questions[i].number,
+            mark: Number(mark),
+            maxMarks: selectedPaper.questions[i].totalMarks,
+            topic: selectedPaper.questions[i].topic
         };
         combResult.push(result);
+        console.log('pushed');
         }
     })
 }
